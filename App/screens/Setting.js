@@ -37,6 +37,7 @@ const placeholderInputPromps =
 const LANGUAGE_OPTIONS = [
   { label: "English", value: "en-US" },
   { label: "French", value: "fr-FR" },
+  { label: "Spanish", value: "es-ES" },
 ];
 
 const { ids, styles } = StyleSheet.create({
@@ -513,7 +514,11 @@ const Setting = ({ navigation }) => {
               error={errors.email}
               inputMode="email"
             />
-            <Select value={language} options={LANGUAGE_OPTIONS} onChange={setLanguage} />
+            <Select
+              value={language}
+              options={LANGUAGE_OPTIONS}
+              onChange={setLanguage}
+            />
             <View style={{ ...tw("flex-row justify-between") }}>
               <Typography
                 style={[
